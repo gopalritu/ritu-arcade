@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101827" />
+  <meta name="description" content="Play Flappy Bird and Car Dodging in your browser." />
+  <title>Ritu Arcade — Ritu Raj
+  </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#home" id="brandHome"><span class="brand-mark">✦</span> Ritu Arcade</a>
+      <span class="top-note">TWO CLASSIC ARCADE CHALLENGES</span>
+    </header>
+
+    <section id="homeScreen" class="screen home-screen">
+      <div class="hero">
+        <p class="eyebrow">SMALL GAMES. BIG CHALLENGE.</p>
+        <h1>Your next<br><span>high score</span> starts here.</h1>
+        <p class="hero-copy">Pick a game, beat your best, and try again. No downloads needed.</p>
+      </div>
+      <div class="game-grid">
+        <article class="game-card bird-card">
+          <div class="card-art bird-art"><img src="Assets/Bird.png" alt="Bird character" /><span class="art-pipe pipe-one"></span><span class="art-pipe pipe-two"></span></div>
+          <div class="card-info"><div><p class="card-kicker">01 / REFLEX</p><h2>Flappy Bird</h2><p class="card-desc">Fly through the pipes. Don't hit a thing.</p></div><button class="play-button" data-launch="bird">Play game <span>↗</span></button></div>
+        </article>
+        <article class="game-card car-card">
+          <div class="card-art car-art"><div class="mini-road"><i></i><i></i><i></i></div><img src="Assets/WhiteCar.png" alt="Player car" /></div>
+          <div class="card-info"><div><p class="card-kicker">02 / DODGE</p><h2>Car Dodging</h2><p class="card-desc">Switch lanes and avoid the traffic.</p></div><button class="play-button" data-launch="car">Play game <span>↗</span></button></div>
+        </article>
+      </div>
+      <footer class="home-footer"><span>MADE FOR THE WEB</span><span>Made By Ritu Raj</span></footer>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <div class="game-heading"><button id="backButton" class="back-button">← All games</button><div><p id="gameEyebrow" class="card-kicker">ARCADE GAME</p><h2 id="gameTitle">Flappy Bird</h2></div><div class="game-score-pill">SCORE <strong id="liveScore">0</strong></div></div>
+      <div class="playfield-wrap" id="playfieldWrap"><canvas id="gameCanvas" aria-label="Game play area"></canvas><div id="overlay" class="game-overlay"><p class="overlay-kicker">READY WHEN YOU ARE</p><h3 id="overlayTitle">Flappy Bird</h3><p id="overlayText">Press Space or tap to flap.</p><button id="startButton" class="play-button">Start playing <span>→</span></button></div></div>
+      <div class="game-controls"><span id="controlHint">SPACE / TAP TO FLAP</span><span id="highScoreLabel">PERSONAL BEST: 0</span><button id="pauseButton" class="small-button">Pause</button></div>
+      <div class="touch-controls hidden" id="carTouchControls"><button id="leftTouch" type="button" aria-label="Move car left">←</button><button id="rightTouch" type="button" aria-label="Move car right">→</button></div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
